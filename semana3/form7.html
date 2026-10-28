@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de Formularios</title>
+    <script>
+        function procesar() {
+            let n1=parseInt(document.getElementById("txtn1").value)
+            let n2=parseInt(document.getElementById("txtn2").value)
+            alert(n1+n2)
+
+            }
+    </script>
+</head>
+<body>
+    <h1>formularios de datos personales</h1>
+    <form action=""onsubmit="procesar()">
+        N1: <input type="text" name="txtn1" id="txtn1">
+        <br>N2: <input type="text" name="txtn2" id="txtn2">
+        <br><input type="reset" value="limpiar"><input type="submit" value="Enviar">
+    </form>"
+</body>
+</html>

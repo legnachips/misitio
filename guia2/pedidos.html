@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pedidos · Panadería Santa Rosa</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <p><strong>Panadería Santa Rosa</strong></p>
+    <nav aria-label="Menú principal">
+      <ul>
+        <li><a href="../index.html"></a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#catalogo">Productos</a></li>
+        <li><a href="pedidos.html">Pedidos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Haz tu pedido</h1>
+    <p>Completa el formulario y doña Rosa te confirmará por teléfono.</p>
+
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Tus datos</legend>
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" autocomplete="tel" required>
+
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" autocomplete="email">
+      </fieldset>
+
+      <fieldset>
+        <legend>Tu pedido</legend>
+        <label for="producto">Producto</label>
+        <select id="producto" name="producto">
+          <option>Pan de yema</option>
+          <option>Pan francés</option>
+          <option>Torta de chocolate</option>
+        </select>
+
+        <label for="cantidad">Cantidad</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" value="1">
+
+        <label for="comentarios">Comentarios</label>
+        <textarea id="comentarios" name="comentarios" rows="3"></textarea>
+
+        <label><input type="checkbox" name="delivery"> Quiero entrega a domicilio</label>
+      </fieldset>
+
+      <button type="submit">Enviar pedido</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>Panadería Santa Rosa · Atención de lunes a sábado, de 6:00 a. m. a 8:00 p. m.</p>
+  </footer>
+</body>
+</html>

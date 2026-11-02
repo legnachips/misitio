@@ -1,0 +1,24 @@
+body {
+  background: #FFF8E7;
+  color: #2B2118;
+  font-family: Arial, sans-serif;
+}
+header {
+  background: #5C3A00;
+  color: #FFF8E7;
+  padding: 1rem;
+}
+nav a {
+
+  color: #FFF8E7;
+
+}
+h1, h2 {
+  color: #5C3A00;
+}
+button {
+  background: #5C3A00;
+  color: #FFF8E7;
+  padding: 0.6rem  1rem;
+  border: none;
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Confirmar Pedido | Panadería Santa Rosa</title>
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/marca.css">
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+        <a href="../index.html" class="btn-cancelar-volver">Volver al inicio</a>
+
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-cafe shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index-bootstrap.html">Panadería Santa Rosa</a>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#menuPedidos"
+              aria-controls="menuPedidos" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPedidos">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index-bootstrap.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="index-bootstrap.html#productos">Productos</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="pedidos.html">Pedidos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-4">
+    <div class="mb-3">
+      <a href="index-bootstrap.html" class="btn btn-regresar">
+        <span>←</span> Regresar a la página principal
+      </a>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <section class="card p-4 shadow-sm border-0">
+          <h1 class="h3 fw-bold mb-2">Completa tu pedido</h1>
+          <p class="text-body-secondary mb-4">Ingresa tus datos para coordinar el recojo en tienda.</p>
+
+          <form action="#" novalidate>
+            <div class="mb-3">
+              <label for="nombre" class="form-label fw-semibold">Nombre completo</label>
+              <input type="text" class="form-control" id="nombre" name="nombre" required aria-describedby="error-nombre">
+              <p class="error-texto mt-1 mb-0" id="error-nombre"></p>
+            </div>
+
+            <div class="mb-3">
+              <label for="celular" class="form-label fw-semibold">Celular</label>
+              <input type="tel" class="form-control" id="celular" name="celular" placeholder="Ej. 987 654 321" required aria-describedby="error-celular">
+              <p class="error-texto mt-1 mb-0" id="error-celular"></p>
+            </div>
+
+            <div class="row g-3 mb-3">
+              <div class="col-12 col-md-8">
+                <label for="producto" class="form-label fw-semibold">Producto principal</label>
+                <select class="form-select" id="producto" name="producto" required aria-describedby="error-producto">
+                  <option value="">-- Elige un producto --</option>
+                  <option value="Pan de yema">Pan de yema (S/ 0.50)</option>
+                  <option value="Pan francés">Pan francés (S/ 0.40)</option>
+                  <option value="Chancay">Chancay (S/ 1.20)</option>
+                  <option value="Torta de chocolate">Torta de chocolate (S/ 45.00)</option>
+                </select>
+                <p class="error-texto mt-1 mb-0" id="error-producto"></p>
+              </div>
+
+              <div class="col-12 col-md-4">
+                <label for="cantidad" class="form-label fw-semibold">Cantidad</label>
+                <input type="number" class="form-control" id="cantidad" name="cantidad" min="1" max="100" required aria-describedby="error-cantidad">
+                <p class="error-texto mt-1 mb-0" id="error-cantidad"></p>
+              </div>
+            </div>
+
+            <div class="row g-3 mb-3">
+              <div class="col-12 col-md-6">
+                <label for="fecha" class="form-label fw-semibold">Fecha de recojo</label>
+                <input type="date" class="form-control" id="fecha" name="fecha" required aria-describedby="error-fecha">
+                <p class="error-texto mt-1 mb-0" id="error-fecha"></p>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label for="tienda" class="form-label fw-semibold">Tienda de recojo</label>
+                <select class="form-select" id="tienda" name="tienda">
+                  <option value="Tienda Principal (Jr. Santa Rosa)">Tienda Principal (Jr. Santa Rosa)</option>
+                  <option value="Segunda Tienda (Av. Los Olivos)">Segunda Tienda (Av. Los Olivos)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="indicaciones" class="form-label fw-semibold">Indicaciones adicionales (opcional)</label>
+              <textarea class="form-control" id="indicaciones" name="indicaciones" rows="2" maxlength="200" aria-describedby="contador-indicaciones"></textarea>
+              <div id="contador-indicaciones" class="form-text">Te quedan 200 caracteres</div>
+            </div>
+
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="consentimiento" name="consentimiento" required aria-describedby="error-consentimiento">
+              <label class="form-check-label" for="consentimiento">
+                Autorizo el uso de mis datos únicamente para coordinar y entregar este pedido.
+              </label>
+              <p class="error-texto mt-1 mb-0" id="error-consentimiento"></p>
+            </div>
+
+            <div id="estado" role="status" class="mb-3"></div>
+
+            <div id="zona-retorno" class="mb-3 d-none">
+              <a href="index-bootstrap.html" class="btn btn-regresar w-100 justify-content-center">
+                <span>←</span> Volver a la página principal
+              </a>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2">
+              <button type="submit" class="btn btn-marca btn-lg">Enviar pedido</button>
+              <a href="index-bootstrap.html" class="btn btn-outline-secondary btn-lg">Cancelar y volver</a>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer id="contacto" class="bg-cafe text-white py-4 mt-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <h2 class="h5 fw-bold text-warning">Nuestras tiendas</h2>
+          <p class="mb-1"><strong>Tienda Principal:</strong> Jr. Santa Rosa 245, Centro.</p>
+          <p class="mb-0"><strong>Segunda Tienda:</strong> Av. Los Olivos 890, Parque Norte.</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <h2 class="h5 fw-bold text-warning">Horario de atención</h2>
+          <p class="mb-1">Lunes a sábado: 6:00 a 21:00</p>
+          <p class="mb-0">Domingos y feriados: 6:00 a 13:00</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <h2 class="h5 fw-bold text-warning">Contacto</h2>
+          <p class="mb-1">WhatsApp: 987 654 321</p>
+          <p class="mb-0">Correo: pedidos@panaderiasantarosa.pe</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

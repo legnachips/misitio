@@ -1,0 +1,348 @@
+/* ===== Estilos base Panadería Santa Rosa ===== */
+:root {
+  --crema: #FBF8F1;
+  --cafe: #5C3A21;
+  --dorado: #D9822B;
+  --borde: #E3DECF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--crema);
+  color: #161616;
+  line-height: 1.5;
+}
+
+.cabecera {
+  max-width: 960px;
+  margin: 1rem auto 0;
+  padding: 0 1rem;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.barra-nav {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--cafe);
+  font-weight: 600;
+  padding: 0.45rem 0.9rem;
+  border: 2px solid var(--borde);
+  border-radius: 8px;
+  background: #FFFFFF;
+}
+
+.nav-link.activo {
+  background: var(--cafe);
+  color: #FFFFFF;
+  border-color: var(--cafe);
+}
+
+main {
+  max-width: 960px;
+  margin: 1.5rem auto 3rem;
+  padding: 0 1rem;
+}
+
+h1, h2, h3 {
+  color: var(--cafe);
+}
+
+/* ===== Catálogo de productos ===== */
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.producto {
+  background: #FFFFFF;
+  border: 2px solid var(--borde);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.producto img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.producto h3 {
+  margin: 0.75rem 0 0.25rem;
+}
+
+.precio {
+  font-weight: bold;
+  color: var(--cafe);
+}
+
+button, .btn-principal, .btn-secundario, .btn-regreso-exito {
+  display: inline-block;
+  padding: 0.65rem 1.1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid var(--cafe);
+}
+
+.btn-anadir, button[type="submit"], .btn-principal {
+  background: var(--cafe);
+  color: #FFFFFF;
+}
+
+.btn-anadir:hover, button[type="submit"]:hover, .btn-principal:hover {
+  background: #422816;
+}
+
+.btn-secundario {
+  background: #FFFFFF;
+  color: var(--cafe);
+}
+
+/* ===== Formulario Semana 3 ===== */
+form {
+  background: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 2px solid var(--borde);
+  max-width: 600px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border: 2px solid #999;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.campo-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.campo-checkbox input {
+  margin-top: 0.3rem;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.campo-checkbox label {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+.acciones-form {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.btn-regreso-exito {
+  margin-top: 0.75rem;
+  background: #1B6B3A;
+  border-color: #1B6B3A;
+  color: #FFFFFF;
+}
+
+/* ===== 7. Mensajes de validación (Semana 3) ===== */
+.error {
+  margin: 0.25rem 0 0;
+  color: #A11A1A;
+  font-weight: bold;
+}
+
+.error:empty {
+  display: none;
+}
+
+.error::before {
+  content: "⚠ ";
+}
+
+[aria-invalid="true"] {
+  border-color: #A11A1A;
+  border-width: 3px;
+}
+
+#estado:not(:empty) {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--cafe);
+  border-radius: 8px;
+  background: #FFFFFF;
+  font-weight: bold;
+}
+
+/* ===== 8. Mi pedido (Semana 4) ===== */
+#mi-pedido {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  background: #FFFFFF;
+  border: 2px solid #E3DECF;
+  border-radius: 12px;
+}
+
+.pedido-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.pedido-cabecera h2 {
+  margin: 0;
+}
+
+#lista-pedido {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+#lista-pedido li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid #E3DECF;
+}
+
+.controles-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.btn-cantidad {
+  padding: 0.35rem 0.75rem;
+  background: var(--crema);
+  color: var(--cafe);
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.btn-cantidad:hover {
+  background: #EFE7D6;
+}
+
+.btn-quitar {
+  width: auto;
+  padding: 0.35rem 0.75rem;
+  background: #FFFFFF;
+  color: var(--cafe);
+}
+
+.btn-quitar:hover {
+  background: #F9EBEB;
+  border-color: #A11A1A;
+  color: #A11A1A;
+}
+
+.caja-sugerencia {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  background: #FFF8EB;
+  border: 2px dashed var(--dorado);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.caja-sugerencia[hidden] {
+  display: none;
+}
+
+.caja-sugerencia p {
+  margin: 0;
+}
+
+.btn-sugerencia {
+  background: var(--dorado);
+  border-color: #B86B1B;
+  color: #161616;
+  padding: 0.45rem 0.9rem;
+}
+
+.btn-sugerencia:hover {
+  background: #C67320;
+  color: #FFFFFF;
+}
+
+.pedido-pie {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.total {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+#titulo-pedido:focus {
+  outline: 3px solid #161616;
+  outline-offset: 2px;
+}
+
+/* Visible solo para lectores de pantalla */
+.solo-lector {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

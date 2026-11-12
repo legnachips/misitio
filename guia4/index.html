@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panadería Santa Rosa · Catálogo y Canasta (Semana 4)</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/pedido.js" defer></script>
+</head>
+<body>
+      <a href="../index.html" class="btn-cancelar-volver">Volver al inicio</a>
+
+  <header class="cabecera">
+    <img src="img/sonic.jpg" alt="Banner ilustrado de Panadería Santa Rosa" class="banner-img">
+    <nav class="barra-nav" aria-label="Navegación principal">
+      <a href="index.html" class="nav-link activo">Canasta (Guía 4)</a>
+      <a href="pedidos.html" class="nav-link">Formulario de pedidos (Guía 3) →</a>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="titulo-catalogo">
+      <h1 id="titulo-catalogo">Nuestros productos recién horneados</h1>
+      <p class="intro">Elige los productos que deseas agregar a tu canasta.</p>
+
+      <div class="catalogo">
+        <article class="producto" data-nombre="Pan de yema" data-precio="0.50">
+          <img src="img/yema.jpg" alt="Canasta de panes de yema dorados recién horneados">
+          <h3>Pan de yema</h3>
+          <p><span class="precio">S/ 0.50</span> la unidad</p>
+          <button type="button" class="btn-anadir">Añadir</button>
+        </article>
+
+        <article class="producto" data-nombre="Chancay" data-precio="1.20">
+          <img src="img/chamcay.jpg" alt="Bizcochos chancay suaves y dulces">
+          <h3>Chancay</h3>
+          <p><span class="precio">S/ 1.20</span> la unidad</p>
+          <button type="button" class="btn-anadir">Añadir</button>
+        </article>
+
+        <article class="producto" data-nombre="Empanada de carne" data-precio="4.50">
+          <img src="img/empanada.jpg" alt="Empanada horneada rellena de carne">
+          <h3>Empanada de carne</h3>
+          <p><span class="precio">S/ 4.50</span> la unidad</p>
+          <button type="button" class="btn-anadir">Añadir</button>
+        </article>
+
+        <article class="producto" data-nombre="Torta de chocolate" data-precio="45.00">
+          <img src="img/torta.jpg" alt="Torta húmeda de chocolate con cobertura">
+          <h3>Torta de chocolate</h3>
+          <p><span class="precio">S/ 45.00</span> entera</p>
+          <button type="button" class="btn-anadir">Añadir</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="mi-pedido" aria-labelledby="titulo-pedido">
+      <div class="pedido-cabecera">
+        <h2 id="titulo-pedido" tabindex="-1">Mi pedido</h2>
+        <button type="button" id="btn-vaciar" class="btn-secundario" hidden>Vaciar pedido</button>
+      </div>
+
+      <p id="pedido-vacio">Tu pedido está vacío. Añade productos del catálogo.</p>
+      <ul id="lista-pedido"></ul>
+
+      <div id="sugerencia-honesta" class="caja-sugerencia" hidden>
+        <p>¿Añadir <strong>mantequilla artesanal</strong> por <strong>S/ 2.50</strong> para acompañar tu pan?</p>
+        <button type="button" id="btn-anadir-mantequilla" class="btn-sugerencia">Añadir mantequilla (S/ 2.50)</button>
+      </div>
+
+      <div class="pedido-pie">
+        <p class="total">Total: <strong id="total">S/ 0.00</strong></p>
+        <a href="pedidos.html" class="btn-principal">Continuar con mis datos →</a>
+      </div>
+
+      <p id="aviso" class="solo-lector" role="status"></p>
+    </section>
+  </main>
+</body>
+</html>

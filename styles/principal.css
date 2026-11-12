@@ -5,7 +5,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
-  color: #cf701c;
+  color: #f7f7f8;
   background: #77624e;
 }
 
@@ -15,7 +15,7 @@ main {
   padding: 1.5rem 1rem;
 }
 
-h1 { color: #560acf; font-size: 2rem; line-height: 1.2; }
+h1 { color: #db0909; font-size: 2rem; line-height: 1.2; }
 
 .guias {
   list-style: none;
@@ -28,8 +28,8 @@ h1 { color: #560acf; font-size: 2rem; line-height: 1.2; }
 .guias a {
   display: block;
   padding: 1rem;
-  background: #1c99d3;
-  color: #f00c0c;
+  background: #0b6b97;
+  color: #000000;
   font-weight: bold;
   text-decoration: none;
   border-radius: 8px;
